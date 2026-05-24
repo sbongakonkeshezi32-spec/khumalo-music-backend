@@ -1,0 +1,21 @@
+khumalo-music-backend/
+├── app/
+│   ├── __init__.py
+│   ├── main.py                 # FastAPI core setup & static assets mount
+│   ├── database/
+│   │   ├── __init__.py
+│   │   └── connection.py       # SQLite connection manager & session dependency
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── song.py             # SQLAlchemy schemas (tracks database structure)
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   └── songs.py            # Upload, approve, reject, stream & search logic
+│   └── services/
+│       ├── __init__.py
+│       └── mega_service.py     # Auth & file uploads to your cloud (seansibae@gmail.com)
+├── .env                        # Live private system configurations (ignore in git)
+├── .env.example                # Blank configuration templates for other developers
+├── requirements.txt            # Python dependencies (fastapi, python-multipart, mega.py)
+├── start.sh                    # Production entrypoint script for Render
+└── README.md                   # Setup instruction guide
